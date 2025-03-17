@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Casa - Hotel Management System</title>
+    <link rel="stylesheet" href="mrms_style.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="logo-container">
+            <div class="tagline">lux hotel | Since 2025</div>
+            <div class="logo">la casa</div>
+        </div>
+        
+        <button class="nav-button active">Dashboard</button>
+        <button class="nav-button">Reservation</button>
+        <button class="nav-button">Rooms</button>
+        <button class="nav-button">Guests</button>
+        <button class="nav-button">Staff</button>
+        <button class="nav-button">Settings</button>
+    </div>
+    
+    <div class="main-content">
+        <div class="header">
+            <div class="user-info">
+                <div class="user-name">Admin</div>
+            </div>
+            <div class="logout-btn">Logout</div>
+        </div>
+        
+        <div class="content">
+            <div class="card">
+                <div class="title-button">Manage Rooms</div>
+                
+                <div class="button-grid">
+                    <button class="action-button" id="addRoomBtn">Add Room</button>
+                    <button class="action-button" id="editRoomBtn">Edit Room</button>
+                    <button class="action-button" id="remvRoomBtn">Remove Room</button>
+                    
+                    <button class="action-button" id="editAvlBtn">Edit Availability</button>
+                    <button class="action-button" id="setPriceBtn">Set Price</button>
+                    <button class="action-button" id="statusBtn">Room Status</button>
+
+                </div>
+                
+                <div style="display: flex; justify-content: center;">
+                    <button class="action-button bottom-button" style="width: 250px;" id="vRoomsBtn">View Rooms</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="modal-overlay" id="addRoomModal">
+        <div class="modal">
+            <div class="modal-header">
+                Room Details
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-label">Room Name:</label>
+                    <input type="text" class="form-control">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group" style="flex: 1;">
+                        <label class="form-label">Room type:</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    
+                    <div class="form-group" style="flex: 1;">
+                        <label class="form-label">Room Floor:</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                
+                <div class="form-group" style="width: 45%;">
+                    <label class="form-label">Room number:</label>
+                    <input type="text" class="form-control">
+                </div>
+                
+                <div class="modal-footer">
+                    <button class="btn-add">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="editRoomModal">
+        <div class="modal">
+            <div class="modal-header">
+                Room Details
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-label">Search Room:</label>
+                    <input type="text" class="form-control">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group" style="flex: 1;">
+                        <label class="form-label">Room type:</label>
+                        <select id="dropdown" onchange="select1()">
+                            <option value="Deluxe Room">Deluxe</option>
+                            <option value="Standard Room">Standard</option>
+                            <option value="Convention Hall">Convention</option>
+                          </select>
+                          
+                          <p id="result"></p>
+                          
+                    </div>
+                    
+                    <div class="form-group" style="flex: 1;">
+                        <label class="form-label">Room Floor:</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                
+                <div class="form-group" style="width: 45%;">
+                    <label class="form-label">Room number:</label>
+                    <input type="text" class="form-control">
+                </div>
+                
+                <div class="modal-footer">
+                    <button class="btn-add">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-overlay" id="remvRoomModal">
+        <div class="modal">
+            <div class="modal-header">
+                Room Details
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-label">Room Name:</label>
+                    <input type="text" class="form-control">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group" style="flex: 1;">
+                        <label class="form-label">Room type:</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    
+                    <div class="form-group" style="flex: 1;">
+                        <label class="form-label">Room Floor:</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                
+                <div class="form-group" style="width: 45%;">
+                    <label class="form-label">Room number:</label>
+                    <input type="text" class="form-control">
+                </div>
+                
+                <div class="modal-footer">
+                    <button class="btn-add">Remove</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="editAvlModal">
+        <div class="modal">
+            <div class="modal-header">
+                Room Details
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-label">Search Room:</label>
+                    <input type="text" class="form-control">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group" style="flex: 1;">
+                        <label class="form-label">Room type:</label>
+                        <select id="dropdown" onchange="select2()">
+                            <option value="Deluxe Room">Deluxe</option>
+                            <option value="Standard Room">Standard</option>
+                            <option value="Convention Hall">Convention</option>
+                          </select>
+                          
+                          <p id="reslt"></p>
+                          
+                    </div>
+                    
+                    <div class="form-group" style="flex: 1;">
+                        <label class="form-label">Room Floor:</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                
+                <div class="form-group" style="width: 45%;">
+                    <label class="form-label">Room number:</label>
+                    <input type="text" class="form-control" required>
+                </div>
+                <div><label class="container">Available
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>|
+                  </label><br>
+                  
+                  <label class="container">Occupied
+                    <input type="checkbox">
+                    <span class="checkmark"></span>|
+                  </label><br>
+                  <label class="container">Reserved
+                    <input type="checkbox">
+                    <span class="checkmark"></span>|
+                  </label><br>
+                  <label class="container">Under Maintenance
+                    <input type="checkbox">
+                    <span class="checkmark"></span>|
+                  </label><br>
+                </div>
+                
+                
+                <div class="modal-footer">
+                    <button class="btn-add">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal-overlay" id="setPriceModal">
+        <div class="modal">
+            <div class="modal-header">
+                Room Details
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-label">Search for room to update:</label>
+                    <input type="text" class="form-control">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group" style="flex: 1;">
+                        <label class="form-label">Set Price:</label>
+                        <input type="text" class="form-control">
+                    </div>
+                
+                <div class="modal-footer">
+                    <button class="btn-add">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    
+    <div class="modal-overlay" id="statusModal">
+        <div class="modal">
+            <div class="modal-header">
+                Room Details
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-label">Search for room to see status:</label>
+                    <input type="text" class="form-control">
+                </div>
+                             
+                <div class="modal-footer">
+                    <button class="btn-add">Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal-overlay" id="vRoomsModal">
+        <div class="modal2">
+            <div class="modal-header2">
+                Room Archive
+            </div>
+            <div class="modal-body2">
+
+                <a href="#amethyst" class="room-button">Amethyst</a>
+                <a href="#sapphire" class="room-button">Sapphire</a>
+                
+ 
+                <a href="#emerald" class="room-button">Emerald</a>
+                <a href="#diamond" class="room-button">Diamond</a>
+                
+    
+                <div class="convention-container">
+                    <a href="#convention" class="convention-button">
+                        Convention<br>Rooms
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="mrms.js"></script>
+    
+
+</body>
+</html>
