@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+}
+
+#sidepanel {
+    background-color: rgba(77, 117, 187, 0.88);
+    width: 14.5rem;
+    height: 100vh;
+    position: fixed;
+    justify-items: center;
+    color: white;
+}
+
+#upperpanel {
+    background-color: rgba(20, 49, 114, 1);
+    width: 84vw;
+    height: 4rem;
+    position: fixed;
+    left: 14.5rem;
+    padding: .25rem;
+}
+
+.bigbox {
+    background-color: rgb(221, 221, 221);
+    width: 59rem;
+    height: 30rem;
+    position: fixed;
+    top: 7rem;
+    left: 20rem;
+}
+
+#upperbox {
+    display: flex;
+    justify-content: center;
+    margin: .5rem;
+}
+
+.boxes {
+    background-color: rgba(20, 49, 114, 1);
+    width: 200px;
+    height: 90px;
+    border-radius: 30px;
+    margin: 3%;
+    display: flex;
+    padding: .1rem;
+    justify-content: center;
+}
+
+.boxes p {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+}
+
+.bigbox2 {
+    margin: 3%;
+    border: 2px solid;
+    display: flex;
+    height: 18.5rem;
+    width: 55rem;
+    position: relative;
+    top: 30px;
+}
+
+.lowerbox {
+    border: 1px solid;
+    height: 300px;
+    margin: 1%;
+    position: absolute;
+    width: 937.5px;
+}
+
+.lowerbox span {
+    margin: 2%;
+    background-color: rgba(20, 49, 114, 1);
+    height: 20px;
+    width: auto;
+    padding: .25rem;
+    color: white;
+    position: absolute;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+}
+
+.boxes123 {
+    position: absolute;
+    top: 5.5rem;
+    display: flex;
+    left: 2rem;
+}
+
+#box1,
+#box2,
+#box3,
+#box4 {
+    margin: 2%;
+    border-radius: 25px;
+    background-color: rgba(20, 49, 114, 1);
+    width: 180px;
+    height: 60px;
+    text-align: center;
+    padding: .5rem;
+}
+
+#box1 a,
+#box2 a,
+#box3 a,
+#box4 a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+}
+
+#lacasa {
+    font-family: serif;
+    font-size: 40px;
+}
+
+#luxhotel {
+    font-family: "Poppins", sans-serif;
+}
+
+.sideboxes {
+    background-color: rgba(20, 49, 114, 1);
+    border-radius: 15px;
+    width: 150px;
+    height: 45px;
+    display: block;
+    margin: 1.5rem;
+    position: relative;
+    top: 3rem;
+    text-align: center;
+}
+
+.sideboxes a {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+#upperpanel nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+#logout {
+    left: 65rem;
+    margin: 1rem;
+    position: absolute;
+}
+
+.fa-user {
+    font-size: 30px;
+    padding: 1rem;
+}
+
+#admin {
+    border: 1px solid;
+    position: absolute;
+}
