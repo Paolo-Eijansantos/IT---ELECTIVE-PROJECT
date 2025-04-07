@@ -3,79 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Management System</title>
-    <link rel="stylesheet" href="GuestPage_style.css">
+    <title>Hotel Management</title>
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header id="upperpanel">
-        <nav>
-            <i class="fa-solid fa-user"></i>
-            <a id="admin" href="#">ADMIN</a></div>
-            <a id="logout" href="#">LOGOUT</a>
+    <header>
+        <nav class="navbar">
+            <div id="admin">
+                <a href="#">Admin</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Logout</a></li>
+            </ul>
         </nav>
     </header>
-    <aside id="sidepanel">
-            <p id="luxhotel">lux hotel | Since 2023</p>
-            <h1 id="lacasa">La Casa</h1>
 
-        <div class="sideboxes">
+    <main>
+        <div class="content-container">
+            <div class="three-boxes">
+                <div class="boxes">
+                    Total Guests
+                    <p>40</p>
+                </div>
+                <div class="boxes">
+                    Guests Checking in
+                    <p>30</p>
+                </div>
+                <div class="boxes">
+                    Guests Checking out
+                    <p>20</p>
+                </div>
+            </div>
+
+            <div class="btns-container">
+                <span>Manage Guests Information</span>
+
+                <div class="grid-container">
+                    <div class="manage-btns" id="btn1">
+                        <center><a href="">View Guests Profile</a></center>
+                    </div>
+                    <div class="manage-btns" id="btn2">
+                        <center><a href="">Update Guests Contacts</a></center>
+                    </div>
+                    <div class="manage-btns" id="btn3">
+                        <center><a href="">Manage Special Requests</a></center>
+                    </div>
+                    <div class="manage-btns" id="btn4">
+                        <center><a href="">Stay History</a></center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <aside class="sidepanel">
+        <div class="txt-container">
+            <p id="a1">lux hotel | since 2025</p>
+            <h3 id="lacasa">la casa</h3>
+        </div>
+
+        <div class="navBtns">
             <a href="#">Dashboard</a>
         </div>
-        <div class="sideboxes">
+        <div class="navBtns">
             <a href="#">Reservation</a>
         </div>
-        <div class="sideboxes">
-            <a href="#">Rooms</a>
+        <div class="navBtns">
+            <a href="mnge_rooms.html">Rooms</a>
         </div>
-        <div class="sideboxes">
-            <a href="#">Guests</a>
+        <div class="navBtns" id="navBtns-active">
+            <a>Guests</a>
         </div>
-        <div class="sideboxes">
-            <a href="#">Staff</a>
+        <div class="navBtns">
+            <a href="STAFF_PAGE.HTML">Staff</a>
         </div>
-        <div class="sideboxes">
+        <div class="navBtns">
             <a href="#">Settings</a>
         </div>
-        
-        </aside>
-    <main class="bigbox">
-        <div id="upperbox">
-            <div class="boxes">
-                <p>Total Guests</p>
-                
-            </div>
-            <div class="boxes">
-                <p>Guest Checking in</p>
-                
-            </div>
-            <div class="boxes">
-                <p>Guest Checking Out</p>
-                
-            </div>
-        </div>
-
-        <article class="lowerbox">
-            <span>Manage Guest Information</span>
-
-            <figure class="boxes123">
-                <div id="box1">
-                    <a href="#">View Guest Profiles</a>
-                </div>
-                <div id="box2">
-                    <a href="#">Update Guest Contacts</a>
-                </div>
-                <div id="box3">
-                    <a href="#">Manage Special Request</a>
-                </div>
-                <div id="box4">
-                    <a href="#">Stay History</a>
-                </div>
-            </figure>
-        </article>
-    </main>
-    
+    </aside>
 </body>
 </html>
