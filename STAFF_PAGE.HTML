@@ -5,77 +5,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Reservation System - Staff</title>
-    <link rel="stylesheet" href="staffpage.css">
+    <link rel="stylesheet" href="STAFF_PAGE.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
-    <header id="upperpanel">
-        <nav>
-            <i class="fa-solid fa-user"></i>
-            <a id="admin" href="#">Admin</a>
-            <a id="logout" href="#">Logout</a>
-        </nav>
-    </header>
+    <div class="sidebar">
+        <div class="hotel-title">
+            <div class="hotel-name">LUX HOTEL | SINCE 2023</div>
+            <div class="hotel-casa">la casa</div>
+        </div>
 
-    <aside id="sidepanel">
-        <p id="luxhotel">lux hotel | Since 2023</p>
-        <h1 id="lacasa">la casa</h1>
+        <div class="sidebar-nav">
+            <button class="nav-button">Dashboard</button>
+            <button class="nav-button">Reservation</button>
+            <button class="nav-button">Rooms</button>
+            <button class="nav-button">Guests</button>
+            <button class="nav-button active">Staff</button>
+            <button class="nav-button">Settings</button>
+        </div>
+    </div>
 
-        <div class="sideboxes">
-            <a href="#">Dashboard</a>
-        </div>
-        <div class="sideboxes">
-            <a href="#">Reservation</a>
-        </div>
-        <div class="sideboxes">
-            <a href="mnge_rooms.html">Rooms</a>
-        </div>
-        <div class="sideboxes">
-            <a href="GuestPgae.html">Guests</a>
-        </div>
-        <div class="sideboxes active">
-            <a href="#">Staff</a>
-        </div>
-        <div class="sideboxes">
-            <a href="#">Settings</a>
-        </div>
-    </aside>
-
-    <main class="bigbox">
-        <div id="upperbox">
-            <div class="staff-count-box">
-                <p class="count-title">Total Staffs</p>
-                <p class="count-number">31</p>
+    <div class="main-content">
+        <div class="header">
+            <div class="admin-section">
+                <div class="profile-icon"></div>
+                <div class="admin-badge">Admin</div>
             </div>
-            <div class="staff-count-box">
-                <p class="count-title">Old Staffs</p>
-                <p class="count-number">20</p>
-            </div>
-            <div class="staff-count-box">
-                <p class="count-title">New Staffs</p>
-                <p class="count-number">11</p>
-            </div>
+            <a href="#" class="logout-btn">Logout</a>
         </div>
 
-        <div class="staff-management-container">
-            <div class="management-header">
-                <span>Manage Staff</span>
+        <div class="dashboard">
+            <div id="upperbox">
+                <div class="staff-count-box">
+                    <p class="count-title">Total Staffs</p>
+                    <p class="count-number">31</p>
+                </div>
+                <div class="staff-count-box">
+                    <p class="count-title">Old Staffs</p>
+                    <p class="count-number">20</p>
+                </div>
+                <div class="staff-count-box">
+                    <p class="count-title">New Staffs</p>
+                    <p class="count-number">11</p>
+                </div>
             </div>
 
-            <div class="staff-actions">
-                <div class="action-btn-row">
-                    <button class="staff-action-btn">Add Staff Member</button>
-                    <button class="staff-action-btn">Remove Staff</button>
+            <div class="staff-management-container">
+                <div class="management-header">
+                    <span>Manage Staff</span>
                 </div>
 
-                <div class="action-btn-row">
-                    <button class="staff-action-btn">Assign / Edit<br>Roles</button>
-                    <button class="staff-action-btn">View Employees</button>
+                <div class="staff-actions">
+                    <div class="action-btn-row">
+                        <button class="staff-action-btn">Add Staff Member</button>
+                        <button class="staff-action-btn">Remove Staff</button>
+                    </div>
+
+                    <div class="action-btn-row">
+                        <button class="staff-action-btn">Assign / Edit Roles</button>
+                        <button class="staff-action-btn">View Employees</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </main>
+    </div>
 </body>
 
 </html>
